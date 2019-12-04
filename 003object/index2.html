@@ -6,21 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="">
 </head>
 
 <body>
     <h1 id="demo"></h1>
     <script>
-        var person={
+        var person = {
             firstname: "Tran",
-            lastname:"Nguyen",
+            lastname: "Nguyen",
             age: 32,
-            fullname:function(){
-                return  this.firstname +" " + this.lastname;
+            fullname: function () {
+                return this.firstname + " " + this.lastname;
             }
         };
-        document.getElementById("demo").innerHTML=person.fullname();
+        document.getElementById("demo").innerHTML = person.fullname();
     </script>
+    <table>
+
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <th>Jill Smith</th>
+            <th>50</th>
+        </tr>
+    </table>
 </body>
 
 </html>

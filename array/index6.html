@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Gia tri nho nhat trong day la: <span id="demo"></span></p>
+    <script>
+        var points = [70,30,10,100,35,60];
+
+        document.getElementById("demo").innerHTML = MinArray(points);
+        function MinArray(array) {
+            aLen = array.length;
+            var min = Infinity;
+            while (aLen>=0){
+                if (array[aLen]<min){
+                    min = array[aLen];
+                }
+                aLen--;
+            } ;
+            return min;
+        }
+
+    </script>
+</body>
+</html>

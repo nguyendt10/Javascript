@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo1"></h1>
+    <h2 id="demo2"></h2>
+    <h1 id="demo3"></h1>
+    <h1 id="demo4"></h1>
+    <h1 id="demo5"></h1>
+    <h1 id="demo6"></h1>
+    <h1 id="demo7"></h1>
+    <script>
+        var fruits = ["banana", "apple", "orange", "lemon"]
+        document.getElementById("demo1").innerHTML = fruits.toString();
+        document.getElementById("demo2").innerHTML = fruits.join("*");
+        fruits.pop();
+        document.getElementById("demo3").innerHTML = fruits;
+        fruits.push("kiwi");
+        document.getElementById("demo4").innerHTML = fruits;
+        fruits.shift();
+        document.getElementById("demo5").innerHTML = fruits;
+        fruits.unshift("mango");
+        document.getElementById("demo6").innerHTML = fruits;
+        fruits[0] = "tomato";
+        document.getElementById("demo7").innerHTML = fruits;
+
+    </script>
+</body>
+</html>

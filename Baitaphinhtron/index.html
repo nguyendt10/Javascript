@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h1>EM TẬP LÀM TOÁN</h1>
+        <form action="" name="tinhtoan" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label for="">Nhập bán kính:</label>
+                    </td>
+                    <td>
+                        <input id="bankinhIn" type="text" value="" placeholder="Nhập bán kính">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Chu vi hình tròn là:</label>
+                    </td>
+                    <td>
+                        <input id="chuviOut" type="text" name="tinhtoan">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Diện tích hình tròn là:</label>
+                    </td>
+                    <td>
+                        <input  id="dientichOut" type="text">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <button onclick="myFunction()">Kết quả</button>
+        <p id="warning"></p>
+        <script>
+            function myFunction() {
+                var bankinh, chuvi, dientich;
+                bankinh = document.getElementById("bankinhIn").value;
+                if (isNaN(bankinh)||(bankinh<=0)){
+                    document.getElementById("warning").innerHTML = "Giá trị bán kính nhập không đúng";
+                    document.getElementById("chuviOut").value = "";
+                    document.getElementById("dientichOut").value = "";
+                } else {
+                    chuvi = 2 * Math.PI * Number(bankinh);
+                    dientich = Math.PI * (Number(bankinh) ** 2);
+                    document.getElementById("chuviOut").value = Number(chuvi);
+                    document.getElementById("dientichOut").value = Number(dientich);
+                    document.getElementById("warning").innerHTML = "";
+                }
+            }
+        </script>
+
+
+    </div>
+</body>
+</html>

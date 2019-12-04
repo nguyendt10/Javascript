@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h3>Tính giá trị biểu thức y = (x<sup>2</sup>+5)*n</h3>
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <label for="">Nhập giá trị x:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="inputx" placeholder="Nhập giá trị của x">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Nhập giá trị n:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="inputn" placeholder="Nhập giá trị của n">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Kết quả của biểu thức:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="ketqua">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <button onclick="myFunction()">Kết quả</button>
+        <p id="warning"></p>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x, n, y;
+            x = document.getElementById("inputx").value;
+            n = document.getElementById("inputn").value;
+            if (isNaN(x)||isNaN(n)){
+                document.getElementById("warning").innerHTML = "Giá trị của x hoặc n nhập chưa đúng";
+            }else {
+                document.getElementById("warning").innerHTML = "";
+            }
+            y = (x**2 + 5)*n;
+            document.getElementById("ketqua").value = y;
+            if (isNaN(y)) {
+                document.getElementById("ketqua").value = "";
+            }
+        }
+    </script>
+</body>
+</html>

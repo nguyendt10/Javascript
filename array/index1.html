@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        var fruits, flen,i, text;
+        fruits = ["banana", "coconut", "orange", "apple"];
+        flen = fruits.length;
+        text = "<ul>";
+        for (i=0; i<flen; i++){
+            text += "<li>" + fruits[i] + "</li>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

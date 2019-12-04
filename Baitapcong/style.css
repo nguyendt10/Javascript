@@ -1,0 +1,25 @@
+div{
+    background-color: rgba(88, 139, 255, 0.5);
+    width: 35%;
+    height: 200px;
+    margin: 0 auto;
+}
+h1{
+    text-align:center;
+}
+label{
+    padding-left: 10px;
+}
+button{
+    margin-left:150px;
+    margin-top: 10px;
+}
+input{
+    margin-left:10px;
+}
+body{
+    background-image: url("https://cdn.pixabay.com/photo/2016/04/15/04/02/water-1330252_1280.jpg");
+    background-size: cover;
+    height:100vh;
+    background-position: center;
+}

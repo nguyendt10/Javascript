@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <form action="" name="Em lam toan" method="post">
+        <h1>EM LÀM TOÁN</h1>
+        <table>
+            <tr>
+                <td>
+                    <label for="">Nhập số hạng 1:</label>
+                </td>
+                <td>
+                    <input id="input1" type="text" name="Em lam toan" placeholder="Nhập số hạng một">
+
+                </td>
+                <td>
+                    <span id="warning1"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Nhập số hạng 2:</label>
+                </td>
+                <td>
+                    <input id="input2" type="text" name="Em lam toan" placeholder="Nhập số hạng hai">
+                    <span id="warning2"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Tổng hai số:</label>
+                </td>
+                <td>
+                    <input id="inputtong" type="text" name="Em lam toan" value="">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <button onclick="myFunction()">Tính tổng</button>
+</div>
+<script>
+    function myFunction() {
+        var x, y, text;
+        x = document.getElementById("input1").value;
+        if (isNaN(x)) {
+            document.getElementById("warning1").innerHTML = "Số hạng một chưa phải là số";
+        } else {
+            document.getElementById("warning1").innerHTML = "";
+        }
+        y = document.getElementById("input2").value;
+        if (isNaN(y)) {
+            document.getElementById("warning2").innerHTML = "Số hạng hai chưa phải là số"
+        } else {
+            document.getElementById("warning2").innerHTML = ""
+        }
+        if (!(isNaN(x) || isNaN(y))) {
+            document.getElementById("inputtong").value = Number(x) + Number(y);
+        }
+    }
+</script>
+
+</body>
+</html>

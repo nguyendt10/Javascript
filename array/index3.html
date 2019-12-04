@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <button onclick="myFunction()">Add</button>
+    <p id="demo2"></p>
+    <script>
+        var fruits = ["banana", "coconut", "apple", "mango"];
+        document.getElementById("demo1").innerHTML = "Origin Array: <br>" + fruits;
+        function myFunction() {
+                fruits.splice(2, 1);
+                document.getElementById("demo2").innerHTML = "New Array: <br>" + fruits;
+        }
+
+    </script>
+
+</body>
+</html>
