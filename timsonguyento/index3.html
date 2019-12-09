@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h3>KIỂM TRA SỐ NGUYÊN TỐ</h3>
+    <form action="">
+        <label for="numIn">Nhập số</label><input id="numIn" placeholder="Nhập số cần kiểm tra" type="text" value="">
+    </form>
+    <button onclick="test()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function test() {
+            const x = document.getElementById("numIn").value;
+            if ((isNaN(x)) || (x === "")) {
+                document.getElementById("result").innerHTML = "Nhập lại số";
+            } else if (x <= 1) {
+                document.getElementById("result").innerHTML = Number(x) + " không phải số nguyên tố";
+            } else if (Number(x) !== Math.round(Number(x))) {
+                document.getElementById("result").innerHTML = Number(x) + " không phải số nguyên tố";
+            } else {
+                let y = true;
+                let i;
+                for (i = 2; i < Number(x); i++) {
+                    if ((Number(x) % i) === 0) {
+                        y = false;
+                        break;
+                    }
+                }
+                if (y === true) {
+                    document.getElementById("result").innerHTML = Number(x) + " là số nguyên tố";
+                } else {
+                    document.getElementById("result").innerHTML = Number(x) + " không phải là số nguyên tố"
+                }
+
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

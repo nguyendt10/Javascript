@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    <label for="numIn"></label><input type="text" name="numIn" id="numIn" value="" placeholder="Nhập số">
+    <input type="button" value="Kết quả" onclick="myFunction()">
+    <p id="result"></p>
+</form>
+<script>
+    function myFunction() {
+        document.getElementById("result").innerHTML = "";
+        var x,i;
+        x = document.getElementById("numIn").value;
+        if (isNaN(x)||(x==="")||(Number(x)<1)||(Number(x)!==Math.round(Number(x)))) {
+            document.getElementById("result").innerHTML = "Nhập số nguyên dương";
+        } else {
+            for (i=1; i<x; i++){
+                document.getElementById("result").innerHTML += i + ", ";
+            }
+            document.getElementById("result").innerHTML += Number(x);
+        }
+
+    }
+</script>
+
+</body>
+</html>
