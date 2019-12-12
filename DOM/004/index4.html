@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn">Click Here</button>
+    <p id="demo"></p>
+    <script>
+        const x = document.getElementById("btn");
+        x.addEventListener("mouseover",fOver);
+        x.addEventListener("mouseout",fOut);
+        x.addEventListener("mousedown",fDown);
+        x.addEventListener("mouseup",fUp);
+        function fOver() {
+            document.getElementById("demo").innerHTML += "mouseover <br>";
+        }
+        function fOut() {
+            document.getElementById("demo").innerHTML += "mouseout <br>";
+        }
+        function fDown() {
+            document.getElementById("demo").innerHTML += "mousedown <br>";
+        }
+        function fUp() {
+            document.getElementById("demo").innerHTML +="mouseup <br>";
+        }
+    </script>
+
+</body>
+</html>

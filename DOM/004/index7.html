@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1,#div2{
+            background-color: coral;
+            padding:50px
+        }
+        #p1,#p2 {
+            background-color: white;
+            border:1px solid black;
+            font-size: 20px;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <h1>Bubbling</h1>
+        <p id="p1">Click me!</p>
+    </div>
+    <br>
+    <div id="div2">
+        <h1>Capturing</h1>
+        <p id="p2">Click me!</p>
+    </div>
+    <script>
+        document.getElementById("div1").addEventListener("click",function () {
+            alert("You clicked coral");
+        },false);
+        document.getElementById("p1").addEventListener("click",function () {
+            alert("You clicked white");
+        },false);
+        document.getElementById("div2").addEventListener("click",function () {
+            alert("You clicked coral");
+        },true);
+        document.getElementById("p2").addEventListener("click",function () {
+            alert("You clicked white");
+        },true);
+    </script>
+</body>
+</html>

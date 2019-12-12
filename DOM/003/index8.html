@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        div#demo{
+            background-color: red;
+            width: 100px;
+            height:100px;
+            text-align: center;
+            padding-top:40px;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo" onmousedown="omd(this)" onmouseup="omu(this)">Click me</div>
+    <script>
+        function omd(obj) {
+            obj.innerHTML = "Release Me";
+            obj.style.backgroundColor = "aqua";
+        }
+        function omu(obj) {
+            obj.innerHTML = "Thanks"
+            obj.style.backgroundColor = "red";
+        }
+    </script>
+</body>
+</html>

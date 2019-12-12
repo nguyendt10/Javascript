@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div#container {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            position: relative;
+
+        }
+        div#animate{
+            width:50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<button onclick="myFunction()">Animation</button>
+<button onclick="myReturn()">Return</button>
+<br> <br>
+<div id="container">
+    <div id="animate"></div>
+</div>
+
+<script>
+    var pos = 0;
+    var myElement = document.getElementById("animate");
+    var int1, int2;
+    function myFunction() {
+        clearInterval(int2);
+        int1 = setInterval(frame,10);
+        function frame() {
+            if (pos === 350) {
+                clearInterval(int1);
+            } else {
+                pos++;
+                myElement.style.top = pos + "px";
+                myElement.style.left = pos + "px";
+            }
+        }
+    }
+    function myReturn() {
+        clearInterval(int1);
+        int2= setInterval(frame1,10);
+        function frame1() {
+            if (pos === 0) {
+                clearInterval(int2);
+            }else{
+                pos--;
+                myElement.style.top = pos + "px";
+                myElement.style.left = pos + "px";
+            }
+        }
+    }
+</script>
+</body>
+</html>

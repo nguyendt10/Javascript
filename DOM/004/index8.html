@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            background-color: coral;
+            color: white;
+            font-size: 20px;
+            padding:20px;
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Architecto blanditiis dolorum earum hic ipsam placeat
+            quibusdam ratione sint tempora tenetur? Cupiditate eos
+            hic illo non perspiciatis, possimus. Dolor exercitationem
+            harum magnam modi omnis quae quaerat quibusdam quis? Asperiores,
+            deserunt, unde.
+        </p>
+        <button id="demo" onclick="removeFunction()">Click here</button>
+    </div>
+    <p id="result"></p>
+    <script>
+        document.getElementById("div1").addEventListener("mouseover", myFunction);
+        function myFunction() {
+            document.getElementById("result").innerHTML = Math.random();
+        }
+        function removeFunction(){
+            document.getElementById("div1").removeEventListener("mouseover",myFunction);
+        }
+    </script>
+</body>
+</html>

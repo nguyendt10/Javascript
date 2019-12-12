@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div#container {
+            width: 400px;
+            height: 400px;
+            background-color: white;
+            position: relative;
+            border:1px solid black;
+            left:500px;
+        }
+        div#animate{
+            width:20px;
+            height: 20px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<button onclick="goRight()">goRigh</button>
+<button onclick="goLeft()">goLeft</button>
+<button onclick="goUp()">goUp</button>
+<button onclick="goDown()">goDown</button>
+<br> <br>
+<div id="container">
+    <div id="animate"></div>
+</div>
+
+<script>
+    var Top = 0;
+    var left = 0;
+    var myElement = document.getElementById("animate");
+    var intRight, intLeft, intUp, intDown;
+    function goRight() {
+        clearInterval(intLeft);
+        clearInterval(intDown);
+        clearInterval(intUp);
+        intRight = setInterval(frameRight,10);
+        function frameRight() {
+            if (left === 380) {
+                clearInterval(intRight);
+            } else {
+                left++;
+                myElement.style.left = left + "px";
+            }
+        }
+
+    }
+    function goLeft() {
+        clearInterval(intRight);
+        clearInterval(intDown);
+        clearInterval(intUp);
+        intLeft = setInterval(frameLeft,10);
+        function frameLeft() {
+            if (left === 0){
+                clearInterval(intLeft);
+            }else {
+                left--;
+                myElement.style.left = left +"px";
+            }
+        }
+    }
+    function goDown() {
+        clearInterval(intRight);
+        clearInterval(intLeft);
+        clearInterval(intUp);
+        intDown = setInterval(frameLeft,10);
+        function frameLeft() {
+            if (Top === 380){
+                clearInterval(intDown);
+            }else {
+                Top++;
+                myElement.style.top = Top +"px";
+            }
+        }
+    }
+    function goUp() {
+        clearInterval(intRight);
+        clearInterval(intLeft);
+        clearInterval(intDown);
+        intUp = setInterval(frameUp,10);
+        function frameUp() {
+            if (Top === 0){
+                clearInterval(intUp);
+            }else {
+                Top--;
+                myElement.style.top = Top +"px";
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

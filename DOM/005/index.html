@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">This is a paragraph</p>
+        <p id="p2">This is a paragraph 2</p>
+    </div>
+    <script>
+    const para = document.createElement("p");
+    const text = document.createTextNode("Hello World");
+    para.appendChild(text);
+    const child = document.getElementById("p2");
+    const   element = document.getElementById("div1");
+    element.insertBefore(para,child);
+    </script>
+</body>
+</html>
